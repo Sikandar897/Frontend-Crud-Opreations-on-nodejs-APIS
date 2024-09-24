@@ -1,4 +1,9 @@
+import 'package:app_with_node/create.dart';
+import 'package:app_with_node/delete.dart';
+import 'package:app_with_node/fetch_data.dart';
 import 'package:flutter/material.dart';
+
+import 'update.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -30,6 +35,10 @@ class _HomePageState extends State<HomePage> {
           ElevatedButton(
               onPressed: () {
                 // TODO: Implement create functionality
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CreateScreen()));
               },
               style: const ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(Colors.blueAccent),
@@ -41,6 +50,10 @@ class _HomePageState extends State<HomePage> {
           ElevatedButton(
             onPressed: () {
               // TODO: Implement read functionality
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const FetchDataScreen()));
             },
             style: const ButtonStyle(
                 backgroundColor: WidgetStatePropertyAll(Colors.blueAccent),
@@ -51,6 +64,11 @@ class _HomePageState extends State<HomePage> {
           ElevatedButton(
               onPressed: () {
                 // TODO: Implement update functionality
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => UpdateScreen(),
+                    ));
               },
               style: const ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(Colors.blueAccent),
@@ -60,6 +78,8 @@ class _HomePageState extends State<HomePage> {
           ElevatedButton(
               onPressed: () {
                 // TODO: Implement delete functionality
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DeleteScreen()));
               },
               style: const ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(Colors.blueAccent),
